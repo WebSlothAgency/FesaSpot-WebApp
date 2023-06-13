@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import EventDescriptionTag from '../../components/EventDescriptionTag';
 import AppDownloadPopup from '../../components/AppDownloadPopup';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const Event = () => {
   const [showQA, setShowQA] = useState(false)
@@ -164,7 +165,7 @@ const Event = () => {
             </svg>
             <p className='font-bold mt-4'>EVENEMENT NIET GEVONDEN</p>
           </div>
-          <a href='/' className='mt-6 bg-black px-2 py-1 text-white font-bold rounded-md'>Terug naar home</a>
+          <Link href='/'><div className='mt-6 bg-black px-2 py-1 text-white font-bold rounded-md'>Terug naar home</div></Link>
         </div>
       </div>
     );
