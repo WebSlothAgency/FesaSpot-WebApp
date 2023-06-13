@@ -153,6 +153,23 @@ const Event = () => {
     return "unknown";
   }
 
+  console.log(eventData);
+  if (eventData == undefined) {
+    return (
+      <div className='h-full w-full absolute top-0 left-0 flex items-center justify-center'>
+        <div className='flex flex-col items-center'>
+          <div className='flex flex-col justify-center items-center text-center'>
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M59.1668 6.70825L53.2918 0.833252L30.0002 24.1249L6.7085 0.833252L0.833496 6.70825L24.1252 29.9999L0.833496 53.2916L6.7085 59.1666L30.0002 35.8749L53.2918 59.1666L59.1668 53.2916L35.8752 29.9999L59.1668 6.70825Z" fill="black" />
+            </svg>
+            <p className='font-bold mt-4'>EVENEMENT NIET GEVONDEN</p>
+          </div>
+          <a href='/' className='mt-6 bg-black px-2 py-1 text-white font-bold rounded-md'>Terug naar home</a>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       <AppDownloadPopup />
@@ -166,7 +183,7 @@ const Event = () => {
         <div className='m-auto flex justify-between items-center max-w-2xl'>
           <div className='flex gap-1 items-center'>
             <svg width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_1178_38848)">
+              <g clipPath="url(#clip0_1178_38848)">
                 <path d="M15.5008 9.984C15.3515 10.1333 15.2382 10.3133 15.1435 10.5107L15.1328 10.5L0.17818 44.188L0.192847 44.2027C-0.0844865 44.74 0.379513 45.8333 1.33018 46.7853C2.28085 47.736 3.37418 48.2 3.91151 47.9227L3.92485 47.936L37.6128 32.98L37.6022 32.968C37.7982 32.8747 37.9782 32.7613 38.1288 32.6093C40.2115 30.5267 36.8342 23.7733 30.5875 17.5253C24.3382 11.2773 17.5848 7.90133 15.5008 9.984Z" fill="#C8102E" />
                 <path d="M17.3328 16L0.55418 43.3413L0.17818 44.188L0.192847 44.2027C-0.0844866 44.74 0.379514 45.8333 1.33018 46.7853C1.63951 47.0947 1.96085 47.3293 2.27551 47.528L22.6662 22.6667L17.3328 16Z" fill="#D84258" />
                 <path d="M30.6826 17.4213C36.9092 23.6507 40.3666 30.2907 38.4012 32.2533C36.4372 34.2187 29.7972 30.7627 23.5666 24.536C17.3386 18.3067 13.8826 11.664 15.8466 9.7C17.8119 7.736 24.4519 11.192 30.6826 17.4213Z" fill="#B10020" />
