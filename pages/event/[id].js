@@ -184,7 +184,7 @@ const Event = () => {
     <>
       <AppDownloadPopup />
 
-      <SEO title={eventData.title} url={`https://fesaspot.sr/event/${eventData.id}`} description={eventData.beschrijving.split(/\n/g)[0]} />
+      <SEO title={eventData.title} url={`https://fesaspot.sr/event/${eventData.id}`} description={eventData.beschrijving.text.split(/\n/g)[0]} />
       <div className='fixed w-full h-14 px-4 py-2 bg-white border-b-2 border-b-gra top-0'>
         <div className='m-auto flex justify-between items-center max-w-2xl'>
           <Link href="/" className='flex gap-1 items-center'>
