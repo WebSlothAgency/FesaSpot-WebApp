@@ -252,7 +252,7 @@ const Event = () => {
             <p className="mt-2">{replaceText(eventData.beschrijving.text)}</p>
             {eventData.tags.length > 0 && <div className="flex flex-row gap-2 mt-3 overflow-x-auto overflow-y-hidden">
               {eventData.tags.map((tag, i) => {
-                return <EventDescriptionTag key={`tag-${i}`} index={i} text={tag.tag} />
+                return <EventDescriptionTag hasRandomColor={false} key={`tag-${i}`} index={i} text={tag.tag} />
               })}
             </div>}
           </div>
