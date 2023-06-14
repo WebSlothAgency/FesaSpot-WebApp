@@ -18,43 +18,43 @@ const EventBlock = ({ data }) => {
 
     let tags = sortByTagLength([...data.tags])
 
-    function truncateText(text) {
-        const maxLength = 150;
+    // function truncateText(text) {
+    //     const maxLength = 150;
 
-        // Split the text into sentences
-        let sentences = text.split(/[.!?]/);
+    //     // Split the text into sentences
+    //     let sentences = text.split(/[.!?]/);
 
-        // Remove any empty sentences
-        sentences = sentences.filter(sentence => sentence.trim() !== '');
+    //     // Remove any empty sentences
+    //     sentences = sentences.filter(sentence => sentence.trim() !== '');
 
-        let truncatedText = '';
-        let currentLength = 0;
+    //     let truncatedText = '';
+    //     let currentLength = 0;
 
-        // Iterate through the sentences until the maximum length is reached
-        for (let i = 0; i < sentences.length; i++) {
-            const sentence = sentences[i];
-            const sentenceLength = sentence.length;
+    //     // Iterate through the sentences until the maximum length is reached
+    //     for (let i = 0; i < sentences.length; i++) {
+    //         const sentence = sentences[i];
+    //         const sentenceLength = sentence.length;
 
-            // Check if adding the current sentence exceeds the maximum length
-            if (currentLength + sentenceLength <= maxLength) {
-                truncatedText += sentence.trim() + '. ';
-                currentLength += sentenceLength;
+    //         // Check if adding the current sentence exceeds the maximum length
+    //         if (currentLength + sentenceLength <= maxLength) {
+    //             truncatedText += sentence.trim() + '. ';
+    //             currentLength += sentenceLength;
 
-                // Check if adding the current sentence exceeds the maximum length with ".."
-                if (currentLength + 2 > maxLength) {
-                    truncatedText += '..';
-                    break;
-                }
-            } else {
-                // If adding the current sentence exceeds the maximum length, truncate it and add ".."
-                const remainingLength = maxLength - currentLength;
-                truncatedText += sentence.substring(0, remainingLength).trim() + '..';
-                break;
-            }
-        }
+    //             // Check if adding the current sentence exceeds the maximum length with ".."
+    //             if (currentLength + 2 > maxLength) {
+    //                 truncatedText += '..';
+    //                 break;
+    //             }
+    //         } else {
+    //             // If adding the current sentence exceeds the maximum length, truncate it and add ".."
+    //             const remainingLength = maxLength - currentLength;
+    //             truncatedText += sentence.substring(0, remainingLength).trim() + '..';
+    //             break;
+    //         }
+    //     }
 
-        return truncatedText.trim();
-    }
+    //     return truncatedText.trim();
+    // }
 
     function truncateText(txt) {
         return txt.split(/\n/g)[0]

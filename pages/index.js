@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/react-hooks';
 import Link from 'next/link';
+import SEO from '../components/SEO';
 
 const currentDate = new Date();
 // currentDate.setDate(currentDate.getDate() - 3);
@@ -85,11 +86,7 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>FesaSpot</title>
-        <meta name="description" content="Uw ultieme partyguide in uw broekzak!" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO />
 
       <main >
         <div className='fixed w-full h-14 px-4 py-2 bg-white z-50 border-b-2 border-b-gra top-0'>

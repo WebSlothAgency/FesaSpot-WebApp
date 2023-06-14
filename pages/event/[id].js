@@ -6,6 +6,7 @@ import EventDescriptionTag from '../../components/EventDescriptionTag';
 import AppDownloadPopup from '../../components/AppDownloadPopup';
 import Head from 'next/head';
 import Link from 'next/link';
+import SEO from '../../components/SEO';
 
 const Event = () => {
   const [showQA, setShowQA] = useState(false)
@@ -179,19 +180,11 @@ const Event = () => {
     );
   }
 
-  console.log(eventData.artists.split("\n").join("\n"));
-
   return (
     <>
       <AppDownloadPopup />
 
-      <Head>
-        <title>FesaSpot - {eventData.title}</title>
-        <meta name="description" content="Uw ultieme partyguide in uw broekzak!" />
-        <link rel="icon" href="/favicon.ico" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6142479111003129"
-          crossOrigin="anonymous"></script>
-      </Head>
+      <SEO title={eventData.title} url={`https://fesaspot.sr/event/${eventData.id}`} description={eventData.beschrijving.split(/\n/g)[0]} />
       <div className='fixed w-full h-14 px-4 py-2 bg-white border-b-2 border-b-gra top-0'>
         <div className='m-auto flex justify-between items-center max-w-2xl'>
           <Link href="/" className='flex gap-1 items-center'>
