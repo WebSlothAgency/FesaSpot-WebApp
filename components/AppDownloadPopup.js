@@ -27,7 +27,7 @@ const AppDownloadPopup = () => {
 
     return (
         <>
-            {popup && <div className='fixed bottom-0 w-full p-4 md:hidden'>
+            {popup && <div className='z-50 fixed bottom-0 p-2 w-full md:hidden'>
                 <div className='bg-white border-black border-2 rounded-lg'>
                     <div className='p-2 flex flex-col gap-2 relative'>
                         <p className='font-semibold text-lg text'>Download de FesaSpot app!</p>

@@ -83,9 +83,17 @@ const Event = () => {
   const eventData = data.events[0];
 
   function replaceText(txt) {
-    console.log(txt);
+    // console.log(txt);
+
+    return (
+      <>
+        {txt.replace(/\\n\\n/g, " ").split("\n").map(t => {
+          return <p className="text-gray-700">{t}</p>
+        })}
+      </>
+    )
+
     // return txt.replace(/\\n/g, '\n');
-    return txt
   }
 
   function getHourFromDate(dateString) {
@@ -171,6 +179,8 @@ const Event = () => {
     );
   }
 
+  console.log(eventData.artists.split("\n").join("\n"));
+
   return (
     <>
       <AppDownloadPopup />
@@ -184,7 +194,7 @@ const Event = () => {
       </Head>
       <div className='fixed w-full h-14 px-4 py-2 bg-white border-b-2 border-b-gra top-0'>
         <div className='m-auto flex justify-between items-center max-w-2xl'>
-          <div className='flex gap-1 items-center'>
+          <Link href="/" className='flex gap-1 items-center'>
             <svg width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_1178_38848)">
                 <path d="M15.5008 9.984C15.3515 10.1333 15.2382 10.3133 15.1435 10.5107L15.1328 10.5L0.17818 44.188L0.192847 44.2027C-0.0844865 44.74 0.379513 45.8333 1.33018 46.7853C2.28085 47.736 3.37418 48.2 3.91151 47.9227L3.92485 47.936L37.6128 32.98L37.6022 32.968C37.7982 32.8747 37.9782 32.7613 38.1288 32.6093C40.2115 30.5267 36.8342 23.7733 30.5875 17.5253C24.3382 11.2773 17.5848 7.90133 15.5008 9.984Z" fill="#C8102E" />
@@ -211,7 +221,7 @@ const Event = () => {
             </svg>
 
             <p className='font-bold text-2xl'>FesaSpot</p>
-          </div>
+          </Link>
           <button onClick={() => openInApp()} className='rounded-full border-2 border-gray-300 bg-white text-black font-bold w-fit ml-0 px-3 py-1'>Openen de app</button>
         </div>
       </div>
@@ -219,7 +229,7 @@ const Event = () => {
 
         <div className='flex gap-4 items-start mt-14'>
           <div className='aspect-[3/4] w-2/6 rounded-md border-2 border-gray-300 overflow-hidden'>
-            <img className=' h-full' src={eventData.banner.url} />
+            <img className='h-full w-full' src={eventData.banner.url} />
           </div>
           <div>
             {eventData?.promoted && <div className='flex gap-2'>
@@ -229,7 +239,9 @@ const Event = () => {
               <p className="font-bold text-promotionColor">Promoted</p>
             </div>}
             <h1 className='font-bold text-2xl'>{eventData.title}</h1>
-            <EventDescriptionTag ageTag key={`age-tag`} index={0} text={eventData.age} />
+            <div className='mt-2'>
+              <EventDescriptionTag ageTag key={`age-tag`} index={0} text={eventData.age} />
+            </div>
             <p className="mt-2">26 Mei 2023 ({getHourFromDate(eventData?.startDate)}) · {eventData?.locationDisplayName}</p>
           </div>
         </div>
@@ -255,7 +267,9 @@ const Event = () => {
           {eventData.artists && <div className="p-4">
             <p className="font-semibold">Artiesten</p>
             <div>
-              <p className="text-gray-700">{replaceText(eventData.artists)}</p>
+              {eventData.artists.split("\n").map(artist => {
+                return <p className="text-gray-700">{artist}</p>
+              })}
             </div>
           </div>}
 

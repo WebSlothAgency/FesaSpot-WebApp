@@ -4,6 +4,7 @@ import EventBlock from '../components/EventBlock';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/react-hooks';
+import Link from 'next/link';
 
 const currentDate = new Date();
 // currentDate.setDate(currentDate.getDate() - 3);
@@ -91,9 +92,9 @@ export default function Home() {
       </Head>
 
       <main >
-        <div className='fixed w-full h-14 px-4 py-2 bg-white border-b-2 border-b-gra top-0'>
-          <div className='m-auto flex justify-between items-center max-w-2xl'>
-            <div className='flex gap-1 items-center'>
+        <div className='fixed w-full h-14 px-4 py-2 bg-white z-50 border-b-2 border-b-gra top-0'>
+          <div className='m-auto flex justify-between bg-white items-center max-w-2xl'>
+            <Link href="/" className='flex gap-1 items-center'>
               <svg width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1178_38848)">
                   <path d="M15.5008 9.984C15.3515 10.1333 15.2382 10.3133 15.1435 10.5107L15.1328 10.5L0.17818 44.188L0.192847 44.2027C-0.0844865 44.74 0.379513 45.8333 1.33018 46.7853C2.28085 47.736 3.37418 48.2 3.91151 47.9227L3.92485 47.936L37.6128 32.98L37.6022 32.968C37.7982 32.8747 37.9782 32.7613 38.1288 32.6093C40.2115 30.5267 36.8342 23.7733 30.5875 17.5253C24.3382 11.2773 17.5848 7.90133 15.5008 9.984Z" fill="#C8102E" />
@@ -120,7 +121,7 @@ export default function Home() {
               </svg>
 
               <p className='font-bold text-2xl'>FesaSpot</p>
-            </div>
+            </Link>
             <button onClick={() => openInApp()} className='rounded-full border-2 border-gray-300 bg-white text-black font-bold w-fit ml-0 px-3 py-1'>Openen de app</button>
           </div>
         </div>
@@ -140,11 +141,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </main>
+      </main >
 
       <footer>
 
       </footer>
-    </div>
+    </div >
   )
 }

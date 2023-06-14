@@ -56,6 +56,10 @@ const EventBlock = ({ data }) => {
         return truncatedText.trim();
     }
 
+    function truncateText(txt) {
+        return txt.split(/\n/g)[0]
+    }
+
     return (
         <a href={`/event/${data.id}`} className={opacity}>
             <div className="w-full border-2 p-4 border-gray-300 hover:border-black rounded-2xl h-fit">
@@ -65,7 +69,7 @@ const EventBlock = ({ data }) => {
                     </div>
 
                     <div className="h-fit w-4/6 md:w-5/6 ml-2">
-                        <div className="flex flex-col w-9/12 px-2 gap-1">
+                        <div className="flex flex-col w-12/12 px-2 gap-1">
                             <p className="p-xl font-bold w-11/12">{data.title}</p>
                             <div className="flex flex-row">
                                 {tags.length > 0 && <EventDescriptionTag first={true} randomColor text={tags[0].tag} />}
@@ -73,7 +77,7 @@ const EventBlock = ({ data }) => {
                                 <EventDescriptionTag first={true} randomColor text={data.age} />
                             </div>
                             <p>{new Date(data.startDate).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long' })} • {data.locationDisplayName}</p>
-                            <p className="italic p-xs truncate">{truncateText(data.beschrijving.text.replace(/\\n/g, ""))}</p>
+                            <p className="italic line-clamp-2">{truncateText(data.beschrijving.text.replace(/\\n/g, ""))}</p>
                         </div>
                     </div>
                 </div>
