@@ -88,7 +88,7 @@ const Event = () => {
     return (
       <>
         {txt.replace(/\\n\\n/g, " ").split("\n").map(t => {
-          return <p className="text-gray-700">{t}</p>
+          return <p key={Math.random()} className="text-gray-700">{t}</p>
         })}
       </>
     )
@@ -266,11 +266,7 @@ const Event = () => {
 
           {eventData.artists && <div className="p-4">
             <p className="font-semibold">Artiesten</p>
-            <div>
-              {eventData.artists.split("\n").map(artist => {
-                return <p className="text-gray-700">{artist}</p>
-              })}
-            </div>
+            <p>{replaceText(eventData.artists)}</p>
           </div>}
 
           {eventData.pricing && <div className="p-4">
