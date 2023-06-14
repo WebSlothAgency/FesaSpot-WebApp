@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 
 const SEO = ({
-    title = "FesaSpot - De Ultiemde Surinaamse Party Guide!",
+    title = "FesaSpot - De Ultieme Party Guide Voor Suriname!",
     description = "Ontdek een wereld vol feestelijk plezier met FesaSpot! Deze ultieme party app is speciaal ontworpen voor Suriname en stelt jou in staat om moeiteloos alle opkomende feestjes te ontdekken. Met een uitgebreide kalender, gedetailleerde informatie over artiesten en locaties, en live updates, zul je nooit meer een geweldig feest missen.",
     url = "https://fesaspot.sr"
 }) => {
