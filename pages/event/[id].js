@@ -179,6 +179,8 @@ const Event = () => {
         <title>FesaSpot - {eventData.title}</title>
         <meta name="description" content="Uw ultieme partyguide in uw broekzak!" />
         <link rel="icon" href="/favicon.ico" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6142479111003129"
+          crossOrigin="anonymous"></script>
       </Head>
       <div className='fixed w-full h-14 px-4 py-2 bg-white border-b-2 border-b-gra top-0'>
         <div className='m-auto flex justify-between items-center max-w-2xl'>
