@@ -33,7 +33,7 @@ const AppDownloadPopup = () => {
                         <p className='font-semibold text-lg text'>Download de FesaSpot app!</p>
                         <p>Beleef Suriname op zijn best! Blijf up-to-date met de nieuwste evenementen!</p>
                         <div>
-                            <a href={getMobileOperatingSystem() == "Android" ? "https://www.google.com" : "https://youtube.com"}><img className='h-10' src={getMobileOperatingSystem() == "Android" ? '/android.png' : '/ios.png'} /></a>
+                            <a href={getMobileOperatingSystem() == "Android" ? "https://play.google.com/store/apps/details?id=com.websloth.eventssr" : "https://apps.apple.com/app/fesaspot/id6449878405"}><img className='h-10' src={getMobileOperatingSystem() == "Android" ? '/android.png' : '/ios.png'} /></a>
                         </div>
                         <div className='absolute top-2 right-2'>
                             <svg onClick={() => setPopup(false)} width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
