@@ -17,9 +17,9 @@ const fetchFont = async (fontURL) => {
 
 
 export default async function GET(request) {
-    const Inter500 = await fetchFont('http://localhost:3000/font/Inter-Medium.ttf');
-    const Inter600 = await fetchFont('http://localhost:3000/font/Inter-SemiBold.ttf');
-    const Inter700 = await fetchFont('http://localhost:3000/font/Inter-Bold.ttf');
+    const Inter500 = await fetchFont('https://fesaspot.sr/font/Inter-Medium.ttf');
+    const Inter600 = await fetchFont('https://fesaspot.sr/font/Inter-SemiBold.ttf');
+    const Inter700 = await fetchFont('https://fesaspot.sr/font/Inter-Bold.ttf');
 
 
     let title = "Short Event Name"
@@ -29,7 +29,7 @@ export default async function GET(request) {
             <div style={{ width: 1080, height: 1080, position: 'relative', display: 'flex' }}>
                 <div style={{ width: 1080, height: 1080, left: 0, top: 0, position: 'absolute', background: 'white', borderRadius: 16 }} />
                 <div style={{ display: 'flex', width: 491.80, height: 97, left: 66, top: 63, position: 'absolute' }}>
-                    <img style={{ width: 96, height: 96, left: 0, top: 0, position: 'absolute' }} src="http://localhost:3000/logo.png" />
+                    <img style={{ width: 96, height: 96, left: 0, top: 0, position: 'absolute' }} src="https://fesaspot.sr/logo.png" />
                     <div style={{ width: 365, left: 126.80, top: 1, position: 'absolute', color: 'black', fontSize: 79.24, fontFamily: 'Inter', fontWeight: 'bolder', wordWrap: 'break-word' }}>FesaSpot</div>
                 </div>
                 <div style={{ left: 66, top: 223, position: 'absolute', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex' }}>
@@ -54,8 +54,8 @@ export default async function GET(request) {
                     <div style={{ width: 700, height: 50, color: 'black', fontSize: 32, fontFamily: 'Inter', fontWeight: 700, wordWrap: 'break-word' }}>Download de FesaSpot app voor meer info</div>
 
                     <div style={{ justifyContent: 'center', alignItems: 'flex-start', gap: 16, display: 'flex' }}>
-                        <img style={{ width: 281, height: 85 }} src="http://localhost:3000/google.png" />
-                        <img style={{ width: 282, height: 85 }} src="http://localhost:3000/apple.png" />
+                        <img style={{ width: 281, height: 85 }} src="https://fesaspot.sr/google.png" />
+                        <img style={{ width: 282, height: 85 }} src="https://fesaspot.sr/apple.png" />
                     </div>
                 </div>
             </div>
