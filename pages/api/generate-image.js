@@ -170,8 +170,8 @@ export default async function GET(req, res) {
                 <div style={{ alignSelf: 'stretch', height: 200, paddingRight: 48, flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-start', gap: 24, display: 'flex' }}>
                     <div style={{ width: 900, color: '#8A8A8A', fontSize: 40, fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word' }}>Download FesaSpot voor meer info</div>
                     <div style={{ alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'flex-end', gap: 48, display: 'flex' }}>
-                        <img style={{ width: 468, height: 120 }} src="http://localhost:3000/new-ios.png" />
-                        <img style={{ width: 468, height: 120 }} src="http://localhost:3000/new-android.png" />
+                        <img style={{ width: 468, height: 120 }} src="https://fesaspot.sr/new-ios.png" />
+                        <img style={{ width: 468, height: 120 }} src="https://fesaspot.sr/new-android.png" />
                     </div>
                 </div>
             </div>
