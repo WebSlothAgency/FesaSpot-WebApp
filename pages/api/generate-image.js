@@ -152,7 +152,7 @@ export default async function GET(req, res) {
                 </div> */}
                 <div style={{ alignSelf: 'stretch', flex: '1 1 0', paddingTop: 48, paddingBottom: 48, justifyContent: 'flex-start', alignItems: 'center', gap: 48, display: 'flex' }}>
                     <div style={{ flex: '1 1 0', height: 552, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'flex' }}>
-                        <img style={{ width: 414, height: 552, position: 'relative', borderRadius: 8, borderLeft: '2px solid', borderTop: '2px solid', borderRight: '2px solid', borderBottom: '2px solid' }} src={banner} />
+                        <img style={{ width: 414, height: 552, position: 'relative', borderRadius: 16, borderLeft: '2px #E0E0E0 solid', borderTop: '2px #E0E0E0 solid', borderRight: '2px #E0E0E0 solid', borderBottom: '2px #E0E0E0 solid' }} src={banner} />
                         <div style={{ flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'flex' }}>
                             <div style={{ alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 24, display: 'flex' }}>
                                 {tag != false && <div style={{ height: 75, paddingLeft: 36, paddingRight: 36, paddingTop: 4, paddingBottom: 4, background: finalColors.bg, borderRadius: 48, borderLeft: `1px ${finalColors.border} solid`, borderTop: `1px ${finalColors.border} solid`, borderRight: `1px ${finalColors.border} solid`, borderBottom: `1px ${finalColors.border} solid`, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
