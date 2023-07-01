@@ -22,7 +22,6 @@ const Event = () => {
   }, [id]);
 
 
-
   const { loading, error, data, refetch } = useQuery(gql`
     query MyQuery {
       events(where: { id: "${id}" }) {
