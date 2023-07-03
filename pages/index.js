@@ -84,6 +84,10 @@ export default function Home() {
     seteventsCalendar(old => groupedEvents)
   }
 
+  function openInApp() {
+    window.location.href = (getMobileOperatingSystem() == "Android" ? "https://play.google.com/store/apps/details?id=com.websloth.eventssr" : "https://apps.apple.com/app/fesaspot/id6449878405");
+  }
+
   return (
     <div>
       <SEO />
@@ -124,7 +128,7 @@ export default function Home() {
         </div>
         <div className='m-auto p-4 sm:px-0 max-w-2xl'>
           <div className='flex gap-4 items-start mt-14 w-full'>
-            <div className='w-full flex flex-col gap-4 mt-0 pb-32 h-fit'>
+            <div className='w-full flex flex-col gap-4 mt-0 pb-12 h-fit'>
               {eventsCalendar.map((eventMonth, x) => {
                 return (
                   <div key={`events-${eventMonth.Month}`} className="w-full flex flex-col">
@@ -137,11 +141,13 @@ export default function Home() {
               })}
             </div>
           </div>
+          <div className='flex flex-col items-center gap-4  pb-16'>
+            <p className='font-bold text-2xl text-center'>Wil je graag je eigen evenement toevoegen? Of heb je een evenement dat je graag wilt voorstellen?</p>
+            <Link href='/evenement-toevoegen' className='border-2 p-4 border-gray-300 rounded-xl font-semibold hover:border-black'>Evenement Toevoegen</Link>
+          </div>
         </div>
       </main >
-
       <footer>
-
       </footer>
     </div >
   )

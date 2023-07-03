@@ -135,7 +135,7 @@ const Event = () => {
     // var now = new Date().valueOf();
     // setTimeout(function () {
     //   if (new Date().valueOf() - now > 100) return;
-    window.location.href = (getMobileOperatingSystem() == "Android" ? "https://play.google.com/store/apps/details?id=com.websloth.eventssr" : "https://google.com");
+    window.location.href = (getMobileOperatingSystem() == "Android" ? "https://play.google.com/store/apps/details?id=com.websloth.eventssr" : "https://apps.apple.com/app/fesaspot/id6449878405");
     // }, 50);
     // window.location = `com.websloth.eventssr://`;
   }
