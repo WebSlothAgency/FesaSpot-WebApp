@@ -44,7 +44,7 @@ const evenementToevoegen = () => {
                             </svg>
                             <p className='font-bold text-2xl'>FesaSpot</p>
                         </Link>
-                        <button onClick={() => openInApp()} className='rounded-full border-2 border-gray-300 bg-white text-black font-bold w-fit ml-0 px-3 py-1'>Openen de app</button>
+                        <button onClick={() => openInApp()} className='rounded-full border-2 border-gray-300 bg-white text-black font-bold w-fit ml-0 px-3 py-1'>Open de app</button>
                     </div>
                 </div>
                 <div className='m-auto p-4 sm:px-0 max-w-2xl mt-16 flex flex-col gap-2'>
