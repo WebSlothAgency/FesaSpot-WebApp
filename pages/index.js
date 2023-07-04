@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/react-hooks';
 import Link from 'next/link';
 import SEO from '../components/SEO';
+import Footer from '../components/Footer';
 
 const currentDate = new Date();
 // currentDate.setDate(currentDate.getDate() - 3);
@@ -147,8 +148,7 @@ export default function Home() {
           </div>
         </div>
       </main >
-      <footer>
-      </footer>
+      <Footer />
     </div >
   )
 }

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import SEO from '../components/SEO'
 import Head from 'next/head'
+import Footer from '../components/Footer'
 const evenementToevoegen = () => {
     function openInApp() {
         window.location.href = (getMobileOperatingSystem() == "Android" ? "https://play.google.com/store/apps/details?id=com.websloth.eventssr" : "https://apps.apple.com/app/fesaspot/id6449878405");
@@ -159,8 +160,7 @@ const evenementToevoegen = () => {
                     </div>
                 </div>
             </main >
-            <footer>
-            </footer>
+            <Footer />
         </div >
     )
 }

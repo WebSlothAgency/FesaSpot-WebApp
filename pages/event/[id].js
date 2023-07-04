@@ -7,6 +7,7 @@ import AppDownloadPopup from '../../components/AppDownloadPopup';
 import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
+import Footer from '../../components/Footer';
 
 const Event = () => {
   const [showQA, setShowQA] = useState(false)
@@ -328,10 +329,8 @@ const Event = () => {
           </div>
         </div>
 
-        <div className='mt-6'>
-          <p>©FesaSpot.sr, Alle rechten voorbehouden.</p>
-        </div>
       </div>
+      <Footer />
     </>
   )
 }

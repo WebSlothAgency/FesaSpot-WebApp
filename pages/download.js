@@ -23,7 +23,7 @@ const Download = () => {
 
 
     return (
-        <div className='flex items-center justify-center h-screen w-screen'>
+        <div className='flex items-center justify-center h-screen w-screen md:max-w-3xl m-auto'>
             <div className='w-4/5 flex flex-col items-start gap-4'>
                 <div onClick={() => { window.location.href = "/" }} className='flex items-center gap-4 cursor-pointer'>
                     <svg width="45" height="45" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
