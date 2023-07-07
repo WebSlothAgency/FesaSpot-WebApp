@@ -14,12 +14,31 @@ const Download = () => {
 
         setTimeout(() => {
             if (isApple) {
+                sendQRMessage("Send to App Store")
                 window.location.href = ios
             } else if (isAndroid) {
+                sendQRMessage("Send to Play Store")
                 window.location.href = android
             }
         }, 1000);
     }, [])
+
+    async function sendQRMessage(message) {
+    let webhookURL = "https://discord.com/api/webhooks/1061415967013478410/RN_6EhRelvDyAfs07UHNL5EfLm7A5uOvVF2B0YMD47U86LlOd-txr8RRKSuRlYzoqdYd"
+    const body = {
+      content: message
+    };
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    };
+
+    await fetch(webhookURL, options);
+  }
 
 
     return (
