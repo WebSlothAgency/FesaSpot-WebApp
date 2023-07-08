@@ -30,7 +30,9 @@ async function getData(id) {
           banner {
             url
           }
+          promoted
           age
+          locationDisplayName
           title
           tags(first: 100) {
             tag
@@ -80,9 +82,9 @@ function getColors(text) {
     }
 
     return {
-        bg:bg[randomNum],
-        border:border[randomNum],
-        txt:txt[randomNum]
+        bg: bg[randomNum],
+        border: border[randomNum],
+        txt: txt[randomNum]
     }
 }
 
@@ -102,6 +104,8 @@ export default async function GET(req, res) {
     let title = data.title
     let date = formatDate(data.startDate)
     let banner = data.banner.url
+    let promoted = data.promoted
+    let location = data.locationDisplayName
 
     //get the shortest tag
     data.tags.sort((a, b) => a.tag.length - b.tag.length)
@@ -151,9 +155,16 @@ export default async function GET(req, res) {
                     <img style={{ width: 96, height: 96, left: 0, top: 0, position: 'absolute' }} src="http://localhost:3000/GenerateLogo.png" />
                 </div> */}
                 <div style={{ alignSelf: 'stretch', flex: '1 1 0', paddingTop: 48, paddingBottom: 48, justifyContent: 'flex-start', alignItems: 'center', gap: 48, display: 'flex' }}>
+                    {promoted && <div style={{ position: "absolute", top: "0px", left: "0px", width: 437.42, height: 48.33, justifyContent: 'flex-start', alignItems: 'center', gap: 16, display: 'flex' }}>
+                        <div style={{ width: 48.33, height: 48.33, position: 'relative', display: "flex", alignItems: 'center' }}>
+                            <img style={{ width: 48.33, height: 48.33, position: 'relative' }} src={"http://localhost:3000/star.png"} />
+                        </div>
+                        <div style={{ color: '#FF7347', fontSize: 33.83, fontFamily: 'Inter', fontWeight: '600', wordWrap: 'break-word' }}>Promoted</div>
+                    </div>}
                     <div style={{ flex: '1 1 0', height: 552, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'flex' }}>
                         <img style={{ width: 414, height: 552, position: 'relative', borderRadius: 16, borderLeft: '2px #E0E0E0 solid', borderTop: '2px #E0E0E0 solid', borderRight: '2px #E0E0E0 solid', borderBottom: '2px #E0E0E0 solid' }} src={banner} />
                         <div style={{ flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 48, display: 'flex' }}>
+
                             <div style={{ alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'center', gap: 24, display: 'flex' }}>
                                 {tag != false && <div style={{ height: 75, paddingLeft: 36, paddingRight: 36, paddingTop: 4, paddingBottom: 4, background: finalColors.bg, borderRadius: 48, borderLeft: `3px ${finalColors.border} solid`, borderTop: `3px ${finalColors.border} solid`, borderRight: `3px ${finalColors.border} solid`, borderBottom: `3px ${finalColors.border} solid`, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
                                     <div style={{ textAlign: 'center', color: finalColors.txt, fontSize: 42, fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word' }}>{tag}</div>
@@ -162,7 +173,10 @@ export default async function GET(req, res) {
                                     <div style={{ textAlign: 'center', color: getColors(ageTag).txt, fontSize: 42, fontFamily: 'Roboto', fontWeight: '500', wordWrap: 'break-word' }}>{ageTag}</div>
                                 </div>
                             </div>
-                            <div style={{ alignSelf: 'stretch', color: '#161722', fontSize: 73, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word' }}>{title}</div>
+                            <div style={{ display: 'flex', flexDirection: 'column'}}>
+                                <div style={{ alignSelf: 'stretch', color: '#161722', fontSize: 64, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word' }}>{title}</div>
+                                <div style={{ alignSelf: 'stretch', color: '#161722', fontSize: 32, fontFamily: 'Roboto', fontWeight: '600', wordWrap: 'break-word' }}>{location}</div>
+                            </div>
                             <div style={{ alignSelf: 'stretch', color: '#161722', fontSize: 42, fontFamily: 'Roboto', fontWeight: '600', wordWrap: 'break-word' }}>{date}</div>
                         </div>
                     </div>
