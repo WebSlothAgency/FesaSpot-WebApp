@@ -124,6 +124,7 @@ export default function Home() {
 
               <p className='font-bold text-2xl'>FesaSpot</p>
             </Link>
+            <Link href='/evenement-toevoegen' className='hidden~md:block hover:border-black rounded-full border-2 border-gray-300 bg-white text-black font-bold w-fit ml-0 px-3 py-1'>Evenement Toevoegen</Link>
             <button onClick={() => openInApp()} className='md:hidden rounded-full border-2 border-gray-300 bg-white text-black font-bold w-fit ml-0 px-3 py-1'>Open de app</button>
           </div>
         </div>

@@ -10,7 +10,7 @@ const evenementToevoegen = () => {
 
     return (
         <div>
-            <SEO />
+            <SEO title="FesaSpot - Voeg Uw Evenementen Toe!" url='https://fesaspot.sr/evenement-toevoegen' />
             <Head>
                 <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
                 <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
