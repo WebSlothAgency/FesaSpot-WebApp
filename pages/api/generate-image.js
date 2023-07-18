@@ -116,44 +116,7 @@ export default async function GET(req, res) {
 
     return new ImageResponse(
         (
-            // <div style={{ width: 1080, height: 1080, position: 'relative', display: 'flex' }}>
-            //     <div style={{ width: 1080, height: 1080, left: 0, top: 0, position: 'absolute', background: 'white', borderRadius: 16 }} />
-            //     <div style={{ display: 'flex', width: 491.80, height: 97, left: 66, top: 63, position: 'absolute' }}>
-            //         <img style={{ width: 96, height: 96, left: 0, top: 0, position: 'absolute' }} src="https://fesaspot.sr/logo.png" />
-            //         <div style={{ width: 365, left: 126.80, top: 1, position: 'absolute', color: 'black', fontSize: 79.24, fontFamily: 'Inter', fontWeight: 'bolder', wordWrap: 'break-word' }}>FesaSpot</div>
-            //     </div>
-            //     <div style={{ left: 66, top: 223, position: 'absolute', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex' }}>
-            //         <img src="https://media.graphassets.com/zWXEXp8T9m76u867EpGt" style={{ width: 432, height: 573.41, background: '#323232', borderRadius: 16, borderLeft: '2px #EAECF0 solid', borderTop: '2px #EAECF0 solid', borderRight: '2px #EAECF0 solid', borderBottom: '0.50px #EAECF0 solid' }} />
-            //         <div style={{ width: 488, height: 573, flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', gap: 16, display: 'flex' }}>
-            //             <div style={{ width: 485.80, height: 35, color: 'black', fontSize: 32, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word' }}>30 September</div>
-            //             <div style={{ width: 485.80, height: (title.length % 16 > 0 ? 130 : 75), color: 'black', fontSize: 47.78, fontFamily: 'Inter', fontWeight: 700, wordWrap: 'break-word' }}>{title}</div>
-            //             <div style={{ height: 25, justifyContent: 'flex-start', alignItems: 'flex-end', gap: 15.93, display: 'flex' }}>
-            //                 <div style={{ paddingLeft: 14.12, paddingRight: 14.12, paddingTop: 3.53, paddingBottom: 3.53, background: '#F4F3FF', borderRadius: 28.24, borderLeft: '0.88px #D9D6FE solid', borderTop: '0.88px #D9D6FE solid', borderRight: '0.88px #D9D6FE solid', borderBottom: '0.88px #D9D6FE solid', justifyContent: 'flex-start', alignItems: 'center', height: "30px", display: 'flex' }}>
-            //                     <div style={{ textAlign: 'center', color: '#5925DC', fontSize: 21.18, fontFamily: 'Inter', fontWeight: '500', lineHeight: 31.77, wordWrap: 'break-word' }}>Festival</div>
-            //                 </div>
-            //                 <div style={{ paddingLeft: 14.12, paddingRight: 14.12, paddingTop: 3.53, paddingBottom: 3.53, background: '#EFF8FF', borderRadius: 28.24, borderLeft: '0.88px #B2DDFF solid', borderTop: '0.88px #B2DDFF solid', borderRight: '0.88px #B2DDFF solid', borderBottom: '0.88px #B2DDFF solid', justifyContent: 'flex-start', alignItems: 'center', height: "30px", display: 'flex' }}>
-            //                     <div style={{ textAlign: 'center', color: '#175CD3', fontSize: 21.18, fontFamily: 'Inter', fontWeight: '500', lineHeight: 31.77, wordWrap: 'break-word' }}>Party</div>
-            //                 </div>
-            //                 <div style={{ paddingLeft: 13.76, paddingRight: 13.76, paddingTop: 3.44, paddingBottom: 3.44, background: '#FFFAEB', borderRadius: 27.51, borderLeft: '0.86px #FEDF89 solid', borderTop: '0.86px #FEDF89 solid', borderRight: '0.86px #FEDF89 solid', borderBottom: '0.86px #FEDF89 solid', justifyContent: 'flex-start', alignItems: 'center', height: "30px", display: 'flex' }}>
-            //                     <div style={{ textAlign: 'center', color: 'black', fontSize: 20.63, fontFamily: 'Inter', fontWeight: '500', lineHeight: 30.95, wordWrap: 'break-word' }}>+18</div>
-            //                 </div>
-            //             </div>
-            //         </div>
-            //     </div>
-            //     <div style={{ height: 157, left: 66, top: 859.41, position: 'absolute', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', gap: 16, display: 'flex' }}>
-            //         <div style={{ width: 700, height: 50, color: 'black', fontSize: 32, fontFamily: 'Inter', fontWeight: 700, wordWrap: 'break-word' }}>Download de FesaSpot app voor meer info</div>
-
-            //         <div style={{ justifyContent: 'center', alignItems: 'flex-start', gap: 16, display: 'flex' }}>
-            //             <img style={{ width: 281, height: 85 }} src="https://fesaspot.sr/google.png" />
-            //             <img style={{ width: 282, height: 85 }} src="https://fesaspot.sr/apple.png" />
-            //         </div>
-            //     </div>
-            // </div>
             <div style={{ width: 1080, height: 1080, padding: 48, background: 'white', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', display: 'flex' }}>
-                {/* <div style={{ width: 509, height: 96, position: 'relative', display: 'flex' }}>
-                    <div style={{ width: 365, height: 94, left: 144, top: 1, position: 'absolute', color: '#101828', fontSize: 79.24, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word' }}>FesaSpot</div>
-                    <img style={{ width: 96, height: 96, left: 0, top: 0, position: 'absolute' }} src="http://localhost:3000/GenerateLogo.png" />
-                </div> */}
                 <div style={{ alignSelf: 'stretch', flex: '1 1 0', paddingTop: 48, paddingBottom: 48, justifyContent: 'flex-start', alignItems: 'center', gap: 48, display: 'flex' }}>
                     {promoted && <div style={{ position: "absolute", top: "0px", left: "0px", width: 437.42, height: 48.33, justifyContent: 'flex-start', alignItems: 'center', gap: 16, display: 'flex' }}>
                         <div style={{ width: 48.33, height: 48.33, position: 'relative', display: "flex", alignItems: 'center' }}>
@@ -215,5 +178,4 @@ export default async function GET(req, res) {
             ]
         },
     );
-    // return new Response(imageG);
 }
