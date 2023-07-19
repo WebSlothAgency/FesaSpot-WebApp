@@ -25,7 +25,7 @@ const Download = () => {
     }, [])
 
     async function sendQRMessage(message) {
-        let webhookURL = "https://discord.com/api/webhooks/1061415967013478410/RN_6EhRelvDyAfs07UHNL5EfLm7A5uOvVF2B0YMD47U86LlOd-txr8RRKSuRlYzoqdYd"
+        let webhookURL = "https://discord.com/api/webhooks/1131257185930858616/SDgXU-nAoNE1vC2SSAIf7TW0Q79ebKwFLbpy9vWV79QTe8AsZGzDz2YQYp0AWEhF4teW"
         const body = {
             content: message
         };
