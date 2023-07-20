@@ -24,7 +24,7 @@ const Download = () => {
                 window.location.href = android
             }
         }, 1000);
-    }, [])
+    }, [router])
 
     async function sendQRMessage(message) {
         let webhookURL = "https://discord.com/api/webhooks/1131257185930858616/SDgXU-nAoNE1vC2SSAIf7TW0Q79ebKwFLbpy9vWV79QTe8AsZGzDz2YQYp0AWEhF4teW"
