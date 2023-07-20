@@ -1,8 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import SEO from '../components/SEO'
+import { useRouter } from 'next/router'
 
 const Download = () => {
+    let router = useRouter()
     let ios = "https://apps.apple.com/nl/app/fesaspot/id6449878405"
     let android = "https://play.google.com/store/apps/details?id=com.websloth.eventssr"
 
@@ -15,10 +17,10 @@ const Download = () => {
 
         setTimeout(() => {
             if (isApple) {
-                sendQRMessage("Send to App Store")
+                sendQRMessage(`Send to **App Store** ${router.query.ref? "from **flyer**" : ""}`)
                 window.location.href = ios
             } else if (isAndroid) {
-                sendQRMessage("Send to Play Store")
+                sendQRMessage(`Send to **Play Store** ${router.query.ref? "from **flyer**" : ""}`)
                 window.location.href = android
             }
         }, 1000);
