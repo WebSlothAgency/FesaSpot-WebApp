@@ -5,11 +5,15 @@ import { useRouter } from 'next/router'
 
 const Download = () => {
     let router = useRouter()
+    const [didSend, setDidSend] = useState(false)
+
     let ios = "https://apps.apple.com/nl/app/fesaspot/id6449878405"
     let android = "https://play.google.com/store/apps/details?id=com.websloth.eventssr"
 
+
     useEffect(() => {
         if (!navigator) return
+        if(didSend) return
         const isApple = /(iPhone|iPod|iPad|Macintosh)/.test(navigator.userAgent);
         const isAndroid = /Android/.test(navigator.userAgent);
         // const isPC = /(Win|Linux)/.test(navigator.platform);
@@ -17,9 +21,11 @@ const Download = () => {
 
         setTimeout(() => {
             if (isApple) {
+                setDidSend(true)
                 sendQRMessage(`Send to **App Store** ${router.query.ref? "from **flyer**" : ""}`)
                 window.location.href = ios
             } else if (isAndroid) {
+                setDidSend(true)
                 sendQRMessage(`Send to **Play Store** ${router.query.ref? "from **flyer**" : ""}`)
                 window.location.href = android
             }
